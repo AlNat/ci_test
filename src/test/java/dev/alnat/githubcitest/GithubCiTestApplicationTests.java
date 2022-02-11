@@ -18,6 +18,12 @@ class GithubCiTestApplicationTests {
     private TestService testService;
 
     @Test
+    void simpleTest() {
+        final var testString = "test";
+        Assertions.assertTrue("test".equalsIgnoreCase(testString));
+    }
+
+    @Test
     void dbTest() {
         Assertions.assertTrue(testService.test());
     }
